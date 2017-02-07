@@ -9,3 +9,10 @@
           %p= course['course']['owner_name']
           %p= course['apply_url']
           = link_to 'Запишись', course['apply_url'], class: 'btn btn-success', target: '_blank'
+.row
+  .col-sm-6.col-md-4
+    - unless @server_condition
+      - if @page.to_i > 1
+        = link_to 'Previous', root_path(page: @page.to_i - 1), class: 'btn btn-default'
+      - unless @courses.count < 3
+        = link_to 'Next', root_path(page: @page.to_i + 1), class: 'btn btn-default'
