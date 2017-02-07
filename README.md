@@ -3,3 +3,5 @@ Application is a simple Teachbase client, allowing a user to get a list of cours
 Uses:
 - RestClient
 - Dalli (for Heroku memcaching)
+
+[Heroku app](https://on-teachbase.herokuapp.com/)
